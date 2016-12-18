@@ -1,4 +1,6 @@
-package com.wakaleo.gameoflife.webtests.pages;
+package com.wakaleo.gameoflife.webtests.pages;\
+
+
 
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
