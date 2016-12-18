@@ -123,7 +123,7 @@
                source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
         <error line="45" severity="warning" message="Line is longer than 80 characters."
                source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-        <error line="48" column="69" severity="warning" message="&apos;3&apos; is a magic number."
+        <error line="48" column="69" severity="warning" message="&apos;3&apos; is a magic number harish."
                source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
         <error line="54" column="43" severity="warning" message="&apos;3&apos; is a magic number."
                source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
