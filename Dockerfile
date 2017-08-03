@@ -8,5 +8,5 @@ RUN mvn clean install
 #RUN mvn clean install
 # Bundle app source
 COPY . /usr/src/app
-EXPOSE 8083
+EXPOSE 9090
 CMD [ 'mvn', 'package' ]
