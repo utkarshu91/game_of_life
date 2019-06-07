@@ -2,6 +2,6 @@
 fil(
   type: 'springboot',
   appName: 'sampleAPP',
-  environment: 'development'
+  environment: 'development',
   service_type: 'tomacat'
 )
