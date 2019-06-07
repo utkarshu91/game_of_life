@@ -1,5 +1,5 @@
 @Library('test-library@master') _
-app(
+fil(
   type: 'springboot',
   appName: 'sampleAPP',
   environment: 'development'
