@@ -3,5 +3,6 @@ fil(
   type: 'springboot',
   appName: 'sampleAPP',
   environment: 'development',
-  service_type: 'tomacat'
+  service_type: 'tomacat',
+  TESTVAR : 'myvariable'
 )
