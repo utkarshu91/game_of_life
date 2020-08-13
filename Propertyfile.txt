@@ -1,2 +1,3 @@
 useracceptance=192.168.3.5
 production=10.10.10.10
+virtualmachine=34.220.254.215
