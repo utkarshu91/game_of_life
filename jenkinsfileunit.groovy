@@ -9,6 +9,10 @@ node('docker-node') {
           stage('Build') {
                 def branch=env.BRANCH_NAME
                 def commit=env.GIT_COMMIT
+                final scmVars = checkout(scm)
+                echo "scmVars: ${scmVars}"
+                echo "scmVars.GIT_COMMIT: ${scmVars.GIT_COMMIT}"
+                echo "scmVars.GIT_BRANCH: ${scmVars.GIT_BRANCH}"
                 sh """
                 ls -ltr
                 echo '$branch'
