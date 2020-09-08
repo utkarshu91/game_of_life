@@ -1,0 +1,2 @@
+echo $filebranchname
+echo $filegitcommit
