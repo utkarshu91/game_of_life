@@ -16,8 +16,10 @@ node('docker-node') {
              
                 echo "${filebranchname}"
                 echo "${filegitcommit}"
-                withEnv(["filegitcommit=${scmVars.GIT_COMMIT}" , "filebranchname=${scmVars.GIT_BRANCH}"]) {
-                    sh "bash envile.sh" 
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',credentialsId: 'jvxdev',accessKeyVariable: 'ENV_AWS_ACCESS_KEY_ID',secretKeyVariable: 'ENV_AWS_SECRET_ACCESS_KEY']]){
+                    withEnv(["filegitcommit=${scmVars.GIT_COMMIT}" , "filebranchname=${scmVars.GIT_BRANCH}"]) {
+                        sh "bash envile.sh" 
+                    }
                 }
                 echo "scmVars.GIT_COMMIT: ${scmVars.GIT_COMMIT}"
                 echo "scmVars.GIT_BRANCH: ${scmVars.GIT_BRANCH}"
