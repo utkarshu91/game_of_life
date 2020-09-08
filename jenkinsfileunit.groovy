@@ -10,7 +10,7 @@ node('docker-node') {
                 def branch = env.BRANCH_NAME
                 sh """
                 ls -ltr
-                echo "$branch"
+                echo '$branch'
                 echo $JOB_NAME
                 echo "${BUILD_NUMBER}"
                 
