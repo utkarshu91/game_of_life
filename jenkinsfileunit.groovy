@@ -7,7 +7,8 @@ node('docker-node') {
         }
         docker.image('jivoxhub/maven:v2').inside("--link ${c.id}:db -u root --privileged") {
           stage('Build') {
-                def branch = env.BRANCH_NAME
+                def branch=env.BRANCH_NAME
+                def commit=env.GIT_COMMIT
                 sh """
                 ls -ltr
                 echo '$branch'
