@@ -16,9 +16,7 @@ node('docker-node') {
                 branchName="${BRANCH_NAME}"
                 echo "${BRANCH_NAME}"
                 echo "set commit id"
-                //echo "${GIT_COMMIT}"
-          
-                //commitId=$(git rev-parse --short=10 ${GIT_COMMIT})
+            
                 echo $commitId
                 
                 """   
