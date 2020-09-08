@@ -11,6 +11,9 @@ node('docker-node') {
                 def commit=env.GIT_COMMIT
                 final scmVars = checkout(scm)
                 echo "scmVars: ${scmVars}"
+                filebranchname="${scmVars.GIT_BRANCH}"
+                filegitcommit="${scmVars.GIT_COMMIT}"
+                bash envile.sh
                 echo "scmVars.GIT_COMMIT: ${scmVars.GIT_COMMIT}"
                 echo "scmVars.GIT_BRANCH: ${scmVars.GIT_BRANCH}"
                 sh """
