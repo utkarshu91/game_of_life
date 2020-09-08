@@ -13,7 +13,7 @@ node('docker-node') {
                 echo "scmVars: ${scmVars}"
                 filebranchname="${scmVars.GIT_BRANCH}"
                 filegitcommit="${scmVars.GIT_COMMIT}"
-                bash envile.sh
+                sh "bash envile.sh"
                 echo "scmVars.GIT_COMMIT: ${scmVars.GIT_COMMIT}"
                 echo "scmVars.GIT_BRANCH: ${scmVars.GIT_BRANCH}"
                 sh """
