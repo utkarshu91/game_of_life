@@ -7,13 +7,13 @@ node('docker-node') {
         }
         docker.image('jivoxhub/maven:v2').inside("--link ${c.id}:db -u root --privileged") {
           stage('Build') {
-            
+                def branch = env.BRANCH_NAME
                 sh """
                 ls -ltr
-                echo "${JOB_NAME}"
+                echo "$branch"
                 echo $JOB_NAME
                 echo "${BUILD_NUMBER}"
-                echo "${BRANCH_NAME}"
+                
                 echo "set branchName"
                 branchName=""
                 
