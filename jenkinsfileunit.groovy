@@ -11,6 +11,7 @@ node('docker-node') {
                 sh """
                 ls -ltr
                 echo "${JOB_NAME}"
+                echo $JOB_NAME
                 echo "${BUILD_NUMBER}"
                 echo "set branchName"
                 branchName="${BRANCH_NAME}"
