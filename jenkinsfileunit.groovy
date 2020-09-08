@@ -12,6 +12,7 @@ node('docker-node') {
                 sh """
                 ls -ltr
                 echo '$branch'
+                echo '$commit'
                 echo $JOB_NAME
                 echo "${BUILD_NUMBER}"
                 
