@@ -11,8 +11,8 @@ node('docker-node') {
                 def commit=env.GIT_COMMIT
                 final scmVars = checkout(scm)
                 echo "scmVars: ${scmVars}"
-                filebranchname="${scmVars.GIT_BRANCH}"
-                filegitcommit="${scmVars.GIT_COMMIT}"
+                def filebranchname="${scmVars.GIT_BRANCH}"
+                def filegitcommit="${scmVars.GIT_COMMIT}"
                 echo $filebranchname
                 echo $filegitcommit
                 echo "${filebranchname}"
