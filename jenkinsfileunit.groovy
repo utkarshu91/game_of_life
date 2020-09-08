@@ -14,8 +14,8 @@ node('docker-node') {
                 echo $JOB_NAME
                 echo "${BUILD_NUMBER}"
                 echo "set branchName"
-                branchName="${BRANCH_NAME}"
-                echo "${BRANCH_NAME}"
+                branchName=""
+                echo "${GIT_BRANCH}"
                 echo "set commit id"
             
                 echo $commitId
