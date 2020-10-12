@@ -15,7 +15,9 @@ pipeline {
               script {
                def props = readYaml file: './environment.yml'
                def envi= props["$var_environment"]
-               sh " echo ${test.${envi}}"
+               
+               sh " echo ${props.test.${envi}}"
+               sh "echo $envi"
                }   
                   
         }
