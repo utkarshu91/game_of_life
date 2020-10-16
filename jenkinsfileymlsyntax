@@ -17,6 +17,9 @@ pipeline {
                echo props.test.t4
               
                sh " echo ${props.test.t4}"
+               def props2 = readYaml file: './envip.yml'
+               echo props2.test
+               sh " echo ${props2.test}"
                
                }   
                   
